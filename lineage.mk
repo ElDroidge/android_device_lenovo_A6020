@@ -21,6 +21,10 @@ $(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
+# Time Zone data for recovery
+PRODUCT_COPY_FILES += \
+    bionic/libc/zoneinfo/tzdata:root/system/usr/share/zoneinfo/tzdata
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_MODEL := A6020
 PRODUCT_NAME := lineage_A6020
